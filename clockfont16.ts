@@ -38,6 +38,13 @@ namespace clockFont {
         color = c;
     }
     /**
+     * @param b brightness
+     */
+    //% blockId="setBrightness" block="setBrightness brightness%b"
+    export function setBrightness(b: number): void {
+        strip.setBrightness(b)
+    }
+    /**
      * @param p position
      * @param n number
      * @param f font
