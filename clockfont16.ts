@@ -51,13 +51,13 @@ namespace clockFont {
         for (let c = p; c < (p + f); c++) {
             for (let j = 0; j < 16; j++) {
                 if ((c % 2) == 0) {
-                    if (((font[fp] >> j) & 0x01) == 0x01) {
+                    if (((font[fp] >> (15 -j)) & 0x01) == 0x01) {
                         strip.setPixelColor(c * 16 + j, color);
                     } else {
                         strip.setPixelColor(c * 16 + j, NeoPixelColors.Black);
                     }
                 } else {
-                    if (((font[fp] >> j) & 0x01) == 0x01) {
+                    if (((font[fp] >> (15 - j)) & 0x01) == 0x01) {
                         strip.setPixelColor(c * 16 + (15 - j), color);
                     } else {
                         strip.setPixelColor(c * 16 + (15 - j), NeoPixelColors.Black);
