@@ -124,9 +124,9 @@ namespace clockFont {
      */
     //% blockId="showClock" block="clock hour%h minute%m second%s"
     export function showClock(h: number, m: number, s: number): void {
-        if (Math.trunc(h / 10) == 0) {
-            clearColumn(0, 8);
-        } else {
+        clearColumn(0, 64);
+
+        if (Math.trunc(h / 10) != 0) {
             displayNumber(0, Math.trunc(h / 10), 8);
         }
         displayNumber(9, h % 10, 9);
