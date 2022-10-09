@@ -46,6 +46,12 @@ namespace clockFont {
         color = c;
     }
     /**
+     */
+    //% blockId="show" block="show"
+    export function show(): void {
+        strip.show();
+    }
+    /**
      * @param b brightness
      */
     //% blockId="setBrightness" block="set Brightness brightness%b"
