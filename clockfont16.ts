@@ -30,6 +30,10 @@ namespace clockFont {
         [0x3E7C, 0x7FFE, 0xE3C7, 0xC183, 0xC183, 0xE3C7, 0x7FFE, 0x3E7C], // 8
         [0x3E0C, 0x7F0E, 0xE383, 0xC183, 0xC183, 0xE387, 0x7FFE, 0x3FFC]  // 9
     ];
+    const font12: number[][] = [
+        [0x03C0,0x0FF0,0x1C38,0x300C,0x6006,0x6006,0x6006,0x6006,0x300C,0x1C38,0x0FF0,0x03C0], // ○
+        [0x4002,0x6006,0x300C,0x1818,0x0C30,0x07E0,0x07E0,0x0C30,0x1818,0x300C,0x6006,0x4002]  // ×
+    ];
     /**
      * @param c RGB color
      */
@@ -53,7 +57,9 @@ namespace clockFont {
     export function displayNumber(p: number, n: number, f: number): void {
         let font: number[];
         if (f == 8) font = font8[n];
-        else font = font9[n];
+        else if(f == 9) font = font9[n];
+        else font = font12[n];
+
         let fp = 0;
         for (let c = p; c < (p + f); c++) {
             for (let j = 0; j < 16; j++) {
