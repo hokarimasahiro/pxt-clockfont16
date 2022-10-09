@@ -44,7 +44,7 @@ namespace clockFont {
     /**
      * @param b brightness
      */
-    //% blockId="setBrightness" block="set Brightness brightness%b"
+    //% blockId="setBrightness" block="setBrightness brightness%b"
     export function setBrightness(b: number): void {
         strip.setBrightness(b)
     }
