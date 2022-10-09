@@ -37,14 +37,14 @@ namespace clockFont {
     /**
      * @param c RGB color
      */
-    //% blockId="setColor" block="setColor RGB%c"
+    //% blockId="setColor" block="set Color RGB%c"
     export function setColor(c: number): void {
         color = c;
     }
     /**
      * @param b brightness
      */
-    //% blockId="setBrightness" block="setBrightness brightness%b"
+    //% blockId="setBrightness" block="set Brightness brightness%b"
     export function setBrightness(b: number): void {
         strip.setBrightness(b)
     }
