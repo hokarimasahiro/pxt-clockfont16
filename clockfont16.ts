@@ -103,10 +103,14 @@ namespace clockFont {
     export function displayColon(p: number): void {
         strip.setPixelColor(p * 16 + 3, color);
         strip.setPixelColor(p * 16 + 4, color);
+        strip.setPixelColor(p * 16 + 5, color);
+        strip.setPixelColor(p * 16 + 10, color);
         strip.setPixelColor(p * 16 + 11, color);
         strip.setPixelColor(p * 16 + 12, color);
         strip.setPixelColor(p * 16 + 19, color);
         strip.setPixelColor(p * 16 + 20, color);
+        strip.setPixelColor(p * 16 + 21, color);
+        strip.setPixelColor(p * 16 + 26, color);
         strip.setPixelColor(p * 16 + 27, color);
         strip.setPixelColor(p * 16 + 28, color);
     }
